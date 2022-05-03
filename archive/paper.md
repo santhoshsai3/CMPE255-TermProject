@@ -23,6 +23,7 @@ The objective of this project is to develop a recommended system for beauty prod
 This is a dataset related to over 2 Million customer reviews and ratings of Beauty related products sold on their website.
 
 It contains
+
 ● userId : Every user identified with a unique id
 
 ● productId : Every product identified with a unique id
