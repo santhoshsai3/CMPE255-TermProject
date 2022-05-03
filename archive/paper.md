@@ -40,10 +40,15 @@ Recommendations are mainly of two types: personalized and non-personalized. In p
 RSs are mainly classified into the 6 types: 
 
 1.Popularity based systems :- These systems provide items that are viewed and purchased by most people and which are highly rated.
+
 2.Classification model based:- This model tries to understand the features of the user and then applies the classification algorithm to decide whether the user is interested in the prodcut or not.
+
 3.Content based recommedations:- This model is mainly based on the information of the contents of the item rather than on the user opinions.
+
 4.Collaberative Filtering:- This model works on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste. It is mainly of two types: a) User-User b) Item -Item
-5.Hybrid Approaches:- This method combines collaborative filtering, content-based filtering, and other approaches .
+
+5.Hybrid Approaches:- This method combines collaborative filtering, content-based filtering, and other approaches.
+
 6.Association rule mining :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
 
 
