@@ -91,9 +91,31 @@ As part of data analysis we analysed some scenarios as below:
 
 # Data Visualization
 
+After analysing the data we made data visuaization using different graphs and charts. Below is the plot showing the total number of users and products with respect to the size of the dataset.
 
 
+<img width="1264" alt="Screen Shot 2022-05-03 at 10 40 09 PM" src="https://user-images.githubusercontent.com/93508580/166628050-b06aafd3-4c44-43aa-a889-7785e9755bc2.png">
 
+A bar plot is plotted to show the ratings given by the users and the mosted rated products
+
+<img width="1285" alt="Screen Shot 2022-05-03 at 10 44 23 PM" src="https://user-images.githubusercontent.com/93508580/166628372-2a8d94a5-4e2a-4b2c-a75d-1f2a3d60a901.png">
+
+<img width="1276" alt="Screen Shot 2022-05-03 at 10 45 24 PM" src="https://user-images.githubusercontent.com/93508580/166628449-9ea9eec2-b535-4eb8-900c-1fad60c3f7e8.png">
+
+In order to find the average rating provided by individual users we plotted a histogram by grouping the userid aganist the ratings and also to show the number of ratings per product
+
+<img width="1237" alt="Screen Shot 2022-05-03 at 10 47 04 PM" src="https://user-images.githubusercontent.com/93508580/166628556-653ff13c-9b89-4807-9c12-e8c825f6dc74.png">
+
+<img width="1231" alt="Screen Shot 2022-05-03 at 10 49 07 PM" src="https://user-images.githubusercontent.com/93508580/166628691-f8d9c0b1-9f6d-42de-ab77-b10c8f3a48fa.png">
+
+A box plot is used to show how ratings data is distributed
+
+
+<img width="430" alt="Screen Shot 2022-05-03 at 10 50 38 PM" src="https://user-images.githubusercontent.com/93508580/166628785-e52df916-80b0-4930-9b84-7825f8c3d6ce.png">
+
+Similarly we are using violin plot for ratings feature to depict summary statistics and the density.
+
+<img width="399" alt="Screen Shot 2022-05-03 at 10 51 20 PM" src="https://user-images.githubusercontent.com/93508580/166628839-7e889fbd-be8e-47a1-ae91-5f62a0a4a7e5.png">
 
 # Comparisons
 
