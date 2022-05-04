@@ -51,6 +51,12 @@ RSs are mainly classified into the 6 types:
 
 6.Association rule mining :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
 
+# Data Exploration
+This dataset has been taken from kaggle which consists of over 2 Million customer reviews and ratings of Beauty related products sold on their website.
+The dataset consists of the following features:
+
+<img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
+
 
 # Comparisons
 
