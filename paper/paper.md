@@ -57,6 +57,43 @@ The dataset consists of the following features:
 
 <img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
 
+The figure shows if there are any missing values for these features. 
+
+<img width="264" alt="Screen Shot 2022-05-03 at 10 14 49 PM" src="https://user-images.githubusercontent.com/93508580/166626259-eb4b28c4-7c32-492a-8840-27f0d2ff9373.png">
+
+As we can see from above there are no missing values for any of the features provided in the dataset.
+
+# Data Cleaning
+
+We can see if there are any duplicate or non unique values as follows
+
+<img width="691" alt="Screen Shot 2022-05-03 at 10 25 40 PM" src="https://user-images.githubusercontent.com/93508580/166627006-dfe170e7-73ef-42be-b965-f8b32b9996bf.png">
+
+As we can see there are no duplicate records nor any missing data to be handled as part of cleaning.
+
+# Data Analysis
+
+As part of data analysis we analysed some scenarios as below:
+
+1.The number of rated products per user
+
+<img width="264" alt="Screen Shot 2022-05-03 at 10 29 55 PM" src="https://user-images.githubusercontent.com/93508580/166627311-bda768d7-346b-4fdb-80a6-5fd08dbb845b.png">
+
+2. The Number of ratings per product
+
+<img width="262" alt="Screen Shot 2022-05-03 at 10 30 43 PM" src="https://user-images.githubusercontent.com/93508580/166627363-0ac1b7c4-5ac0-450a-b2d4-6fcb7057dc92.png">
+
+3. The Number of products rated by each user
+
+<img width="411" alt="Screen Shot 2022-05-03 at 10 31 57 PM" src="https://user-images.githubusercontent.com/93508580/166627441-5fddf7b1-1ac9-429f-865b-8597af62d6bf.png">
+
+<img width="367" alt="Screen Shot 2022-05-03 at 10 32 13 PM" src="https://user-images.githubusercontent.com/93508580/166627462-a697423b-e9b5-4638-84ee-be6fbbd671da.png">
+
+# Data Visualization
+
+
+
+
 
 # Comparisons
 
