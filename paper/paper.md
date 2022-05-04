@@ -119,6 +119,8 @@ Similarly we are using violin plot for ratings feature to depict summary statist
 
 # Comparisons
 
+We are working on different models like cosine similarity,SVM and KNN to acheive the required results and will update the results once we are done with the work.
+
 # Example Analysis
 
 # Conclusions
