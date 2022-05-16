@@ -123,6 +123,12 @@ From the above two graphs we can see that most user have rated the products very
 
 # Comparisons
 
+From the visualiation of the data in the above section. Lets look at what are the conslusions we make and what are the models we are planning to use.
+
+1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will no be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
+
+3.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system.
+
 We are working on different models like cosine similarity,SVM and KNN to acheive the required results and will update the results once we are done with the work.
 
 # Example Analysis
