@@ -58,8 +58,6 @@ The dataset consists of the following features:
 <img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
 Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conculions on the data are also satifactiry.
 
-
-
 The figure shows if there are any missing values for these features. 
 
 <img width="264" alt="Screen Shot 2022-05-03 at 10 14 49 PM" src="https://user-images.githubusercontent.com/93508580/166626259-eb4b28c4-7c32-492a-8840-27f0d2ff9373.png">
@@ -81,6 +79,8 @@ As part of data analysis we analysed some scenarios as below:
 
 <img width="264" alt="Screen Shot 2022-05-03 at 10 29 55 PM" src="https://user-images.githubusercontent.com/93508580/166627311-bda768d7-346b-4fdb-80a6-5fd08dbb845b.png">
 
+
+
 2. The Number of ratings per product
 
 <img width="262" alt="Screen Shot 2022-05-03 at 10 30 43 PM" src="https://user-images.githubusercontent.com/93508580/166627363-0ac1b7c4-5ac0-450a-b2d4-6fcb7057dc92.png">
@@ -98,11 +98,19 @@ After analysing the data we made data visuaization using different graphs and ch
 
 <img width="1264" alt="Screen Shot 2022-05-03 at 10 40 09 PM" src="https://user-images.githubusercontent.com/93508580/166628050-b06aafd3-4c44-43aa-a889-7785e9755bc2.png">
 
+So here we can see there are only 3 attributes to the data that re ProductID, UserID and the ratings for different combinations of these two. There is also time stamp which is not of more use for us. From the above graph we can see that there are actually enough no of data samples to make a recommendation system with satisfactory conclusions.
+
+From the above graph we can also see that the Total size of records is much higher than the no of unique users and no of unique products. That means there are range of rating values for different combination of users and Products. Which makes this dataset a perfect fit for Colloberative Filtering.
+
 A bar plot is plotted to show the ratings given by the users and the mosted rated products
 
 <img width="1285" alt="Screen Shot 2022-05-03 at 10 44 23 PM" src="https://user-images.githubusercontent.com/93508580/166628372-2a8d94a5-4e2a-4b2c-a75d-1f2a3d60a901.png">
 
+From the above we can see that the ratings from all the user tends to be on the higher side which gives rise to posibility of user bias. To eliminate this noramlization can be done as explained below.
+
 <img width="1276" alt="Screen Shot 2022-05-03 at 10 45 24 PM" src="https://user-images.githubusercontent.com/93508580/166628449-9ea9eec2-b535-4eb8-900c-1fad60c3f7e8.png">
+
+Here we can see some products tend to have more no of ratings than other. In some cases its disproportionately higher. So to eliminate this we have filtered out the products keeping a threshold for minimun no of ratings.
 
 In order to find the average rating provided by individual users we plotted a histogram by grouping the userid aganist the ratings and also to show the number of ratings per product
 
@@ -125,9 +133,11 @@ From the above two graphs we can see that most user have rated the products very
 
 From the visualiation of the data in the above section. Lets look at what are the conslusions we make and what are the models we are planning to use.
 
-1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will no be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
+1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will not be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
 
-3.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system.
+3.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
+
+4.Collaberative Filtering:- By looking at the attributes available in the dataset that describe the Product(which is only user Ratings). And also by looking at the clear User-User and User-Product connection from the data. We have decided that Collaberative Filtering will be the apt method for our recommendation system. 
 
 We are working on different models like cosine similarity,SVM and KNN to acheive the required results and will update the results once we are done with the work.
 
