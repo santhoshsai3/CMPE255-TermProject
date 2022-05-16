@@ -56,12 +56,14 @@ This dataset has been taken from kaggle which consists of over 2 Million custome
 The dataset consists of the following features:
 
 <img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
+Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conculions on the data are also satifactiry.
+
+
 
 The figure shows if there are any missing values for these features. 
 
 <img width="264" alt="Screen Shot 2022-05-03 at 10 14 49 PM" src="https://user-images.githubusercontent.com/93508580/166626259-eb4b28c4-7c32-492a-8840-27f0d2ff9373.png">
-
-As we can see from above there are no missing values for any of the features provided in the dataset.
+The dataset doesnt contain any null values or misplaced values. So in that way dataset is completely clean and doesnt need data cleaning in terms of missing values and noise.
 
 # Data Cleaning
 
@@ -116,6 +118,8 @@ A box plot is used to show how ratings data is distributed
 Similarly we are using violin plot for ratings feature to depict summary statistics and the density.
 
 <img width="399" alt="Screen Shot 2022-05-03 at 10 51 20 PM" src="https://user-images.githubusercontent.com/93508580/166628839-7e889fbd-be8e-47a1-ae91-5f62a0a4a7e5.png">
+
+From the above two graphs we can see that most user have rated the products very highly as the concentraion of the ratings is fairly on the higher end. So to eliminate this bias where some user tends to rate Products very leninetly we have normalized the ratings by substracting average rating value from each rating.
 
 # Comparisons
 
