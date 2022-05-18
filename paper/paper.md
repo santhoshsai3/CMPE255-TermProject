@@ -56,7 +56,7 @@ This dataset has been taken from kaggle which consists of over 2 Million custome
 The dataset consists of the following features:
 
 <img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
-Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conclusions on the data are also satifactiry.
+Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conclusions on the data are also satisfactory.
 
 The figure shows if there are any missing values for these features. 
 
@@ -135,11 +135,11 @@ From the visualiation of the data in the above section. Lets look at what are th
 
 1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will not be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
 
-3.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
+2.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
 
-4.Collaberative Filtering:- By looking at the attributes available in the dataset that describe the Product(which is only user Ratings). And also by looking at the clear User-User and User-Product connection from the data. We have decided that Collaberative Filtering will be the apt method for our recommendation system. 
+3.Collaberative Filtering:- By looking at the attributes available in the dataset that describe the Product(which is only user Ratings). And also by looking at the clear User-User and User-Product connection from the data. We have decided that Collaberative Filtering will be the apt method for our recommendation system. 
 
-We are working on different models like cosine similarity,SVM and KNN to acheive the required results and will update the results once we are done with the work.
+We are working on different models like cosine similarity,SVD and KNN to acheive the required results and will update the results once we are done with the work.
 
 # Example Analysis
 
