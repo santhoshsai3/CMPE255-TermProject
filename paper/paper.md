@@ -56,7 +56,7 @@ This dataset has been taken from kaggle which consists of over 2 Million custome
 The dataset consists of the following features:
 
 <img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
-Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conculions on the data are also satifactiry.
+Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conclusions on the data are also satifactiry.
 
 The figure shows if there are any missing values for these features. 
 
