@@ -32,12 +32,12 @@ It contains
 
 ● timestamp : Time of the rating ( ignore this column for this exercise)
 
-So by trining the data using different methods we will develop a recommended system.
+So by training the data using different methods we will develop a recommended system.
 
 # Methods
 Recommendations are mainly of two types: personalized and non-personalized. In personalized recommendations, different users receive different suggestions. In non-personalized recommendations, all the users get same suggestions. 
 
-RSs are mainly classified into the 6 types: 
+Recommended Systems are mainly classified into the 6 types: 
 
 1.Popularity based systems :- These systems provide items that are viewed and purchased by most people and which are highly rated.
 
@@ -50,6 +50,9 @@ RSs are mainly classified into the 6 types:
 5.Hybrid Approaches:- This method combines collaborative filtering, content-based filtering, and other approaches.
 
 6.Association rule mining :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
+
+From the above classified methods of Recommended Systems we decided to implement Popularity Based Recommended systems, User Based Collaborative Filtering and Item based Collaborative Filtering methods. We are not using Content based recommender systems because it recommends products or items based on their description or features. We don’t have any features or descriptions provided in our dataset that can be used for content based. 
+
 
 # Preliminary Analysis
 We will be seeing differnt data visualization and exploration techniques below as part of understanding the data.
