@@ -70,6 +70,9 @@ The dataset doesnt contain any null values or misplaced values. So in that way d
 
 # Data Cleaning
 
+As part of data cleaning we checked for any missing values or duplicates and we found that there are no missing values or duplicates. So the data is clean to a certain extent. Once this is done we tried analyzing the relationship between user and the products and this dataset is mainly based on the ratings that are provided by the user for every product. As part of this we analyzed scenarios like the number of rated products per user and the number of ratings for per product which are shown below. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
+
+
 We can see if there are any duplicate or non unique values as follows
 
 <img width="691" alt="Screen Shot 2022-05-03 at 10 25 40 PM" src="https://user-images.githubusercontent.com/93508580/166627006-dfe170e7-73ef-42be-b965-f8b32b9996bf.png">
