@@ -45,8 +45,23 @@ We are planning to implement collaborative filtering using memory based techniqu
 * Data Exploration
 * Handling Outliers
 
-### 2. Data Visualization
+### 2. Data Analysis
+* Analyzing the Dataset
+
+### 3. Data Visualization
 * Visualizing the data using bar plots, Box plots and violin plots.
+
+### 3. Data Modelling
+* Popularity Recommendation model
+* Cosine Similarity
+* KNN
+* SVD
+
+### Contributors
+* Sai Santosh Yamasani
+* Saroja Kandula
+* Supriya Bhupathiraju
+* Vineet Kiragi
 
 
 
