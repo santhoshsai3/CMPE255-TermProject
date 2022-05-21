@@ -1,16 +1,21 @@
-# CMPE255-TermProject
+# Product Recommender System Based on the Ratings
 
-Team members
 
-Vineet Kiragi - VineetKiragi
 
-Sai Santosh - santhoshsai3
+## Contents
+* Understanding Recommender System
+* Quick Start
+* Folder Structure
+* Installation
+* Steps to run the Project
+* Dataset
+* Problem being investigated
+* Data Science Life Cycle
+* Conclusion
+* Contributors
 
-Saroja Kandula - Saroja1129
 
-Supriya Bhupathiraju - bsupriya65
-
-Title: Product Recommender System Based on the Ratings
+## Understanding Recommender System
 
 Dataset:  We are using a dataset from Kaggle from the link below.
 https://www.kaggle.com/datasets/skillsmuggler/amazon-ratings?select=ratings_Beauty.csv
