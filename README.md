@@ -17,6 +17,9 @@
 
 ## Understanding Recommender System
 
+![image](https://user-images.githubusercontent.com/90812789/169641899-81540bf0-9c19-47d2-b6b3-e3960c3219e4.jpeg)
+
+
 Nowadays, all of the well-known firms such as Netflix, YouTube, Amazon, Facebook, Spotify, and others have become successful as a result of one method: the recommendation system, which benefits both consumers and businesses.
 
 Online shopping is all over the internet . All our needs are just a click away. The biggest of them all is the website AMAZON. The one thing that Amazon is known for other than the variety of products it sells. It's very powerful and accurate recommendation system. A website such as Amazon is built on the business model of recommending the right products to the right user. Successfully doing this might result in a huge revenue jump for the company. Here we are trying to build a recommendation product system based on the previous purchase patterns and ratings.
