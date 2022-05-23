@@ -26,6 +26,19 @@ Online shopping is all over the internet . All our needs are just a click away. 
 
 It suggests to customers the most often viewed products, as well as related products with high ratings, to assist individuals in online shopping in finding the perfect product.
 
+## Installation
+Installation of the packages available in requirements.txt before running the code.
+
+* pip install -r requiremnts.txt 
+
+### Steps to run the project
+
+* Install the code Zip file from the above Git repo in your system's local folder and execute the scripts in the terminal.
+
+      $ git clone https://github.com/santhoshsai3/CMPE255-TermProject.git
+      
+* Navigate to the code folder to run the ipynb files in jupyter notebook.
+
 
 
 ## Dataset
@@ -35,10 +48,10 @@ The CSV consists of around 12 lakh items and 4 columns. The dataset contains lak
 
 
 ## Problem being investigated
-Recommender systems are an integral part of many online systems. From e-commerce to online streaming platforms. 
-Recommender systems employ the past purchase pattern on its user to predict which other products they may be interested in and likely to purchase. Recommending the right products gives a significant advantage to the business. A major portion of the revenue is generated through recommendations. 
+Many online systems have recommender systems as an inherent feature. From online streaming platforms to e-commerce.
+Recommender systems use the user's previous purchase history to anticipate which other products they might be interested in and likely to buy. Recommending the proper products provides the company a huge edge. Recommendations account for a significant amount of the revenue. 
 
-We are planning to implement collaborative filtering using memory based technique of distance proximity using cosine distances and nearest neighbors. We can also play with data by using Jackard similarity. The Collaborative Filtering method is extensively used in streaming platforms and e-commerce sites where customers engage with individual products (in our instance, beauty products) and rate them.
+We intend to use memory-based distance proximity techniques such as cosine distances and nearest neighbors, as well as model-based techniques such as Single Value Decomposition, which factors a matrix into a single value and single vector. We may also use Jackard similarity to play with data. Customers connect with particular products (in our case, beauty products) and rank them using the Collaborative Filtering approach, which is widely utilized in streaming platforms and e-commerce sites.
 
 ## Data Science Life cyle
 ### 1. Data Preprocessing
