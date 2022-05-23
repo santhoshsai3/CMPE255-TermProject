@@ -21,9 +21,61 @@ Our goal of the project is to recommend products to users based on the ratings g
 As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
 
 We have plotted the following plots to infer few observations
-1.Bar plot for unique users,products and total records
+
+- Bar plot for unique users,products and total records
 
 ![bar_plot_user](/images/bar_plot_user.png)
+
+We can infer from the above graph how the data is distributed in the dataset. The total number of records is 2M and total number of users is 1.2M which makes us conclude that on an average every user rates at least twice. The total number of unique products is 250K. We can conclude that on an average, each product is rated at least 8-10 times.
+ 
+- Bar plot for ratings given by users
+
+![bar_plot_user_ratings](/images/bar_plot_user_ratings.png)
+ 
+The above graph shows the distribution of various ratings. The rating 5 was given by 1.2M users which is highest and rating 2 is given by 113k users which is lowest.
+We can also see that the sum of users which gave 1,2,3,4 ratings is still less than the users who gave rating 5.
+ 
+- Bar plot to show the most popular products
+
+![bar_plot_high_rated_products](/images/bar_plot_high_rated_products.png)
+ 
+The above graph shows the most popular products and their frequency. The most popular product is B001MA0QY2 which is rated by 7533 Users.
+The number of ratings for the first popular product and second popular product is very high.
+ 
+- Bar plot to show the ratings range
+
+![ratings_count_products](/images/ratings_count_products.png)
+ 
+ 
+Most of the products have received less than 10 ratings.
+Out of 200k products, 2000 products have received more than 100 ratings.
+ 
+- Violin plot to show the product ratings
+
+![violin_plot_ratings](/images/violin_plot_ratings.png)
+ 
+From the above Violin Plot we can conclude that the number of products with 5 star ratings is high and this number is greater than the sum of all other ratings given to other products.
+The number of products with ratings 2 stars is the least.
+The maximum rating given by any user is 5 and lowest rating given by any user is 1.
+ 
+- Distplot to show the probability of total ratings
+
+![distplot_total_ratings](/images/distplot_total_ratings.png)
+ 
+ 
+From the above graph we can see that the majority of the products have less than 100 ratings and the number of products having more than 100 ratings is very low.
+ 
+ 
+- Jointplot for mean ratings and total ratings
+
+![joint_plot_ratings.png](/images/joint_plot_ratings.png)
+ 
+ 
+Here, as you can see every Data Point represents a distinct product, with y-coordinate representing the total number of users which have rated that product and x-coordinate representing the mean of all the ratings of the corresponding users.
+Also you can see that there is a huge Density in the region corresponding to 0-1000 no of users and between mean rating 3.5-5
+
+
+
 
 
 # Methods
