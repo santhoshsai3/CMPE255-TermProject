@@ -1,7 +1,7 @@
 ---
 title: Product Recommender System Based on the Ratings
 date: "3rd May 2022"
-authors: Vineet Kiragi, Sai Santhosh, Supriya Bhupathiraju, Saroja, San José State University
+authors: Vineet Kiragi, Sai Santhosh Yamsani, Supriya Bhupathiraju, Saroja, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -99,8 +99,16 @@ So as part of this method we are aggregating the count of users for every produc
 
 **3.Content based recommedations** :- This model is mainly based on the information of the contents of the item rather than on the user opinions.
 
-**4.Collaberative Filtering** :- This model works on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste. It is mainly of two types: a) User-User b) Item -Item
+**4.Collaberative Filtering** :- Collaborative filtering is a technique to recommend items to a user based on the items liked by similar users.It is based on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste.
+![CF](https://user-images.githubusercontent.com/47252929/169866425-2f8cbb79-6a0e-4825-9188-5621cc8a8912.png)
+The CF techniques are broadly divided into 2-types:
 ![collaborative filtering](https://user-images.githubusercontent.com/47252929/169863912-e5243cf7-d6c7-4c82-b44e-05ff130f2720.png)
+***1. Memory based Collaborative Filtering:*** There are two types of memory-based collaborative filtering approaches: user-item filtering and item-item filtering. A user-item filtering takes a particular user, find users that are similar to that user based on similarity of ratings, and recommend items that those similar users liked. In contrast, item-item filtering will take an item, find users who liked that item, and find other items that those users or similar users also liked. It takes items and outputs other items as recommendations.
+The key difference of memory-based approach from the model-based techniques is that we are not learning any parameter using gradient descent. The closest user or items are calculated only by using Cosine similarity or Pearson correlation coefficients, which are only based on arithmetic operations.
+***2. Model Based Collaborative Filtering:*** In this approach, collaborative filtering models are developed using machine learning algorithms to predict user’s rating of unrated items and recommends the items which are pridicted with high ratings.
+They can be further classified as :
+<img width="751" alt="Screen Shot 2022-05-23 at 9 43 29 AM" src="https://user-images.githubusercontent.com/47252929/169868256-11dfb8ed-3f2b-4dd7-b192-32592f46c222.png">
+
 **5.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.
 
 **6.Association rule mining** :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
