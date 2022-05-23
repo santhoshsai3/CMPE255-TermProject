@@ -71,7 +71,7 @@ We intend to use memory-based distance proximity techniques such as cosine dista
 * SVD
 
 ### Contributors
-* Sai Santosh Yamasani
+* Sai Santhosh Yamsani
 * Saroja Kandula
 * Supriya Bhupathiraju
 * Vineet Kiragi
