@@ -89,17 +89,21 @@ Recommendations are mainly of two types: personalized and non-personalized. In p
 
 Recommended Systems are mainly classified into the 6 types: 
 
-1.Popularity based systems :- These systems provide items that are viewed and purchased by most people and which are highly rated.
+**1.Popularity based systems** :- These systems provide items that are viewed and purchased by most people and which are highly rated.
+This system works on the basis of popularity or trend. These systems verify about the products or movies which are most popular among the users and directly recommend those.So if a product is often purchased by most people then the system will get to know that the product is most popular and recommends the same for new users. The chances that the new user will purchase that product will be more.In this way the products will be easily sold. 
 
-2.Classification model based:- This model tries to understand the features of the user and then applies the classification algorithm to decide whether the user is interested in the prodcut or not.
+So as part of this method we are aggregating the count of users for every product. Once we have the count of the number of users product wise it becomes easy for us to identify the most popular products.  The products are sorted based on the counts of users and a ranking is provided to each and every product. Now when a UserId is provided as input these popular products will be recommended to the users. If a new user signs in they will find these products as recommendations.But the main disadvantage with this method is this system would recommend the same sort of products which are solely based upon popularity to every other user which is not ideal. So it is not a personalized model.
 
-3.Content based recommedations:- This model is mainly based on the information of the contents of the item rather than on the user opinions.
 
-4.Collaberative Filtering:- This model works on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste. It is mainly of two types: a) User-User b) Item -Item
+**2.Classification model based** :- This model tries to understand the features of the user and then applies the classification algorithm to decide whether the user is interested in the prodcut or not.
 
-5.Hybrid Approaches:- This method combines collaborative filtering, content-based filtering, and other approaches.
+**3.Content based recommedations** :- This model is mainly based on the information of the contents of the item rather than on the user opinions.
 
-6.Association rule mining :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
+**4.Collaberative Filtering** :- This model works on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste. It is mainly of two types: a) User-User b) Item -Item
+
+**5.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.
+
+**6.Association rule mining** :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
 
 From the above classified methods of Recommended Systems we decided to implement Popularity Based Recommended systems, User Based Collaborative Filtering and Item based Collaborative Filtering methods. We are not using Content based recommender systems because it recommends products or items based on their description or features. We don’t have any features or descriptions provided in our dataset that can be used for content based. 
 
