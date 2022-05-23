@@ -1,7 +1,7 @@
 ---
 title: Product Recommender System Based on the Ratings
 date: "3rd May 2022"
-authors: Vineet Kiragi, Sai Santhosh, Supriya, Saroja, San José State University
+authors: Vineet Kiragi, Sai Santhosh, Supriya Bhupathiraju, Saroja, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -13,26 +13,12 @@ header-includes: |
 The business of online shopping thrives on recommending the right product to the right user. Recommending products to an user based on the ratings he has given to similar products might entice the user to buy more Products. So we are trying to create a Recommendation System which with an acceptable accuracy predict the Beauty products a user might like and probably buy depending upon the ratings he/she has given to other Beauty Products. This will help E-Commerce companies(in our case Amazon) make better product placements. Better product placements inturn ensures their product marketing actually reach the corrected most probable potential buyers, inturn generating much more revenue and also better returns on money spent of marketing in per dollar terms.
 
 # Introduction
-In today's world we are overloaded with data which provides us the useful information. But it's not possible for the user to get the information in which they are interested in from the available data. In order to help the user to find out information about the product, recommedation systems are developed.
-
-Recommeder system helps in creating a relation between the user and items and utilizes the similarity between user/item to make recommendations.
-Many popular Ecommerce sites widely use Recommended Systems to recommend news, music, research articles, books, and product items. More the development of e-commerce websites more is the need emerged for providing recommendations compiled from filtering the whole range of available options.With a wide variety of options that are provided to the users from multiple websites, users find it very difficult to make the most appropriate choices.
-
-The objective of this project is to develop a recommended system for beauty products that are sold on Amazon based on the reviews and ratings provided for the products. This dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014.
-
-This is a dataset related to over 2 Million customer reviews and ratings of Beauty related products sold on their website.
-
-It contains
-
-● userId : Every user identified with a unique id
-
-● productId : Every product identified with a unique id
-
-● Rating : Rating of the corresponding product by the corresponding user
-
-● timestamp : Time of the rating ( ignore this column for this exercise)
-
-So by training the data using different methods we will develop a recommended system.
+Our goal of the project is to recommend products to users based on the ratings given to the products. Before diving into data modeling methods, we have to process and clean the data to prepare the dataset for modeling. We will go through the data cleaning, data analysis and data processing in this section.
+ 
+1. Data Collection: We have used a dataset from kaggle. The dataset contains 2 million customer reviews and ratings and 4 features. The entries are from May 1996 - July 2014.
+2. Data Cleaning: We have checked for any null values in the data. We didn't find any null values or duplicates in this dataset. So the dataset is mostly clean. Apart from the null or missing values we found alphanumeric data for UserId and product. So in order to normalize the data we used label encoder to convert alphanumeric data to numeric.
+3. Data Analysis and Visualization: 
+As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
 
 # Methods
 Recommendations are mainly of two types: personalized and non-personalized. In personalized recommendations, different users receive different suggestions. In non-personalized recommendations, all the users get same suggestions. 
