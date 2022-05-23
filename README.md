@@ -72,7 +72,7 @@ We intend to use memory-based distance proximity techniques such as cosine dista
 
 ### Contributors
 * Sai Santhosh Yamsani
-* Saroja Kandula
+* Saroja Kandula - 015911467
 * Supriya Bhupathiraju
 * Vineet Kiragi
 
