@@ -100,7 +100,7 @@ So as part of this method we are aggregating the count of users for every produc
 **3.Content based recommedations** :- This model is mainly based on the information of the contents of the item rather than on the user opinions.
 
 **4.Collaberative Filtering** :- This model works on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste. It is mainly of two types: a) User-User b) Item -Item
-
+![collaborative filtering](https://user-images.githubusercontent.com/47252929/169863912-e5243cf7-d6c7-4c82-b44e-05ff130f2720.png)
 **5.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.
 
 **6.Association rule mining** :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
