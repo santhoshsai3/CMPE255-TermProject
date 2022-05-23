@@ -20,6 +20,12 @@ Our goal of the project is to recommend products to users based on the ratings g
 3. Data Analysis and Visualization: 
 As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
 
+We have plotted the following plots to infer few observations
+1.Bar plot for unique users,products and total records
+
+![bar_plot_user](/images/bar_plot_user.png)
+
+
 # Methods
 Recommendations are mainly of two types: personalized and non-personalized. In personalized recommendations, different users receive different suggestions. In non-personalized recommendations, all the users get same suggestions. 
 
