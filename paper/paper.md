@@ -13,72 +13,78 @@ header-includes: |
 The business of online shopping thrives on recommending the right product to the right user. Recommending products to an user based on the ratings he has given to similar products might entice the user to buy more Products. So we are trying to create a Recommendation System which with an acceptable accuracy predict the Beauty products a user might like and probably buy depending upon the ratings he/she has given to other Beauty Products. This will help E-Commerce companies(in our case Amazon) make better product placements. Better product placements inturn ensures their product marketing actually reach the corrected most probable potential buyers, inturn generating much more revenue and also better returns on money spent of marketing in per dollar terms.
 
 # Introduction
+
+In today's world we are overloaded with data which provides us the useful information. But it's not possible for the user to get the information in which they are interested in from the available data. In order to help the user to find out information about the product, recommedation systems are developed.
+
+Recommeder system helps in creating a relation between the user and items and utilizes the similarity between user/item to make recommendations. Many popular Ecommerce sites widely use Recommended Systems to recommend news, music, research articles, books, and product items. More the development of e-commerce websites more is the need emerged for providing recommendations compiled from filtering the whole range of available options.With a wide variety of options that are provided to the users from multiple websites, users find it very difficult to make the most appropriate choices.
+
+# Methods
+
 Our goal of the project is to recommend products to users based on the ratings given to the products. Before diving into data modeling methods, we have to process and clean the data to prepare the dataset for modeling. We will go through the data cleaning, data analysis and data processing in this section.
  
-1. Data Collection: We have used a dataset from kaggle. The dataset contains 2 million customer reviews and ratings and 4 features. The entries are from May 1996 - July 2014.
-2. Data Cleaning: We have checked for any null values in the data. We didn't find any null values or duplicates in this dataset. So the dataset is mostly clean. Apart from the null or missing values we found alphanumeric data for UserId and product. So in order to normalize the data we used label encoder to convert alphanumeric data to numeric.
-3. Data Analysis and Visualization: 
-As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
+**1.Data Collection:** We have used a dataset from kaggle. The dataset contains 2 million customer reviews and ratings and 4 features. The entries are from May 1996 - July 2014.
+
+**2.Data Cleaning:** We have checked for any null values in the data. We didn't find any null values or duplicates in this dataset. So the dataset is mostly clean. Apart from the null or missing values we found alphanumeric data for UserId and product. So in order to normalize the data we used label encoder to convert alphanumeric data to numeric.
+
+**3.Data Analysis and Visualization:** As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
 
 We have plotted the following plots to infer few observations
 
-- Bar plot for unique users,products and total records
+**- Bar plot for unique users,products and total records**
 
-![bar_plot_user](/images/bar_plot_user.png)
+<img width="700" alt="bar_plot_user" src="/images/bar_plot_user.png">
 
 We can infer from the above graph how the data is distributed in the dataset. The total number of records is 2M and total number of users is 1.2M which makes us conclude that on an average every user rates at least twice. The total number of unique products is 250K. We can conclude that on an average, each product is rated at least 8-10 times.
  
-- Bar plot for ratings given by users
+**- Bar plot for ratings given by users**
 
-![bar_plot_user_ratings](/images/bar_plot_user_ratings.png)
+<img width="700" alt="bar_plot_user_ratings" src="/images/bar_plot_user_ratings.png">
  
 The above graph shows the distribution of various ratings. The rating 5 was given by 1.2M users which is highest and rating 2 is given by 113k users which is lowest.
 We can also see that the sum of users which gave 1,2,3,4 ratings is still less than the users who gave rating 5.
  
-- Bar plot to show the most popular products
+**- Bar plot to show the most popular products**
 
-![bar_plot_high_rated_products](/images/bar_plot_high_rated_products.png)
+<img width="700" alt="bar_plot_high_rated_products" src="/images/bar_plot_high_rated_products.png">
+
  
 The above graph shows the most popular products and their frequency. The most popular product is B001MA0QY2 which is rated by 7533 Users.
 The number of ratings for the first popular product and second popular product is very high.
  
-- Bar plot to show the ratings range
+**- Bar plot to show the ratings range**
 
-![ratings_count_products](/images/ratings_count_products.png)
+<img width="700" alt="ratings_count_products" src="/images/ratings_count_products.png">
  
  
 Most of the products have received less than 10 ratings.
 Out of 200k products, 2000 products have received more than 100 ratings.
  
-- Violin plot to show the product ratings
+**- Violin plot to show the product ratings**
 
-![violin_plot_ratings](/images/violin_plot_ratings.png)
+<img width="600" alt="violin_plot_ratings" src="/images/violin_plot_ratings.png">
  
 From the above Violin Plot we can conclude that the number of products with 5 star ratings is high and this number is greater than the sum of all other ratings given to other products.
 The number of products with ratings 2 stars is the least.
 The maximum rating given by any user is 5 and lowest rating given by any user is 1.
  
-- Distplot to show the probability of total ratings
+**- Distplot to show the probability of total ratings**
 
-![distplot_total_ratings](/images/distplot_total_ratings.png)
+<img width="600" alt="distplot_total_ratings" src="/images/distplot_total_ratings.png">
  
  
 From the above graph we can see that the majority of the products have less than 100 ratings and the number of products having more than 100 ratings is very low.
  
  
-- Jointplot for mean ratings and total ratings
+**- Jointplot for mean ratings and total ratings**
 
-![joint_plot_ratings.png](/images/joint_plot_ratings.png)
+<img width="450" alt="joint_plot_ratings" src="/images/joint_plot_ratings.png">
  
  
 Here, as you can see every Data Point represents a distinct product, with y-coordinate representing the total number of users which have rated that product and x-coordinate representing the mean of all the ratings of the corresponding users.
 Also you can see that there is a huge Density in the region corresponding to 0-1000 no of users and between mean rating 3.5-5
 
 
-
-
-
-# Methods
+# Models
 Recommendations are mainly of two types: personalized and non-personalized. In personalized recommendations, different users receive different suggestions. In non-personalized recommendations, all the users get same suggestions. 
 
 Recommended Systems are mainly classified into the 6 types: 
@@ -96,90 +102,6 @@ Recommended Systems are mainly classified into the 6 types:
 6.Association rule mining :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
 
 From the above classified methods of Recommended Systems we decided to implement Popularity Based Recommended systems, User Based Collaborative Filtering and Item based Collaborative Filtering methods. We are not using Content based recommender systems because it recommends products or items based on their description or features. We don’t have any features or descriptions provided in our dataset that can be used for content based. 
-
-
-# Preliminary Analysis
-We will be seeing differnt data visualization and exploration techniques below as part of understanding the data.
-# Data Exploration
-This dataset has been taken from kaggle which consists of over 2 Million customer reviews and ratings of Beauty related products sold on their website.
-The dataset consists of the following features:
-
-<img width="347" alt="Screen Shot 2022-05-03 at 10 08 59 PM" src="https://user-images.githubusercontent.com/93508580/166625846-1eb43160-f687-4db1-bf71-ea931b2b0f25.png">
-Since there are large no of samples in the dataset. We can assume the dataset probably covers a wide range of users and the resulting conclusions on the data are also satisfactory.
-
-The figure shows if there are any missing values for these features. 
-
-<img width="264" alt="Screen Shot 2022-05-03 at 10 14 49 PM" src="https://user-images.githubusercontent.com/93508580/166626259-eb4b28c4-7c32-492a-8840-27f0d2ff9373.png">
-The dataset doesnt contain any null values or misplaced values. So in that way dataset is completely clean and doesnt need data cleaning in terms of missing values and noise.
-
-# Data Cleaning
-
-As part of data cleaning we checked for any missing values or duplicates and we found that there are no missing values or duplicates. So the data is clean to a certain extent. Once this is done we tried analyzing the relationship between user and the products and this dataset is mainly based on the ratings that are provided by the user for every product. As part of this we analyzed scenarios like the number of rated products per user and the number of ratings for per product which are shown below. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
-
-
-We can see if there are any duplicate or non unique values as follows
-
-<img width="691" alt="Screen Shot 2022-05-03 at 10 25 40 PM" src="https://user-images.githubusercontent.com/93508580/166627006-dfe170e7-73ef-42be-b965-f8b32b9996bf.png">
-
-As we can see there are no duplicate records nor any missing data to be handled as part of cleaning.
-
-# Data Analysis
-
-As part of data analysis we analysed some scenarios as below:
-
-1.The number of rated products per user
-
-<img width="264" alt="Screen Shot 2022-05-03 at 10 29 55 PM" src="https://user-images.githubusercontent.com/93508580/166627311-bda768d7-346b-4fdb-80a6-5fd08dbb845b.png">
-
-
-
-2. The Number of ratings per product
-
-<img width="262" alt="Screen Shot 2022-05-03 at 10 30 43 PM" src="https://user-images.githubusercontent.com/93508580/166627363-0ac1b7c4-5ac0-450a-b2d4-6fcb7057dc92.png">
-
-3. The Number of products rated by each user
-
-<img width="411" alt="Screen Shot 2022-05-03 at 10 31 57 PM" src="https://user-images.githubusercontent.com/93508580/166627441-5fddf7b1-1ac9-429f-865b-8597af62d6bf.png">
-
-<img width="367" alt="Screen Shot 2022-05-03 at 10 32 13 PM" src="https://user-images.githubusercontent.com/93508580/166627462-a697423b-e9b5-4638-84ee-be6fbbd671da.png">
-
-# Data Visualization
-
-After analysing the data we made data visuaization using different graphs and charts. Below is the plot showing the total number of users and products with respect to the size of the dataset.
-
-
-<img width="1264" alt="Screen Shot 2022-05-03 at 10 40 09 PM" src="https://user-images.githubusercontent.com/93508580/166628050-b06aafd3-4c44-43aa-a889-7785e9755bc2.png">
-
-So here we can see there are only 3 attributes to the data that re ProductID, UserID and the ratings for different combinations of these two. There is also time stamp which is not of more use for us. From the above graph we can see that there are actually enough no of data samples to make a recommendation system with satisfactory conclusions.
-
-From the above graph we can also see that the Total size of records is much higher than the no of unique users and no of unique products. That means there are range of rating values for different combination of users and Products. Which makes this dataset a perfect fit for Colloberative Filtering.
-
-A bar plot is plotted to show the ratings given by the users and the mosted rated products
-
-<img width="1285" alt="Screen Shot 2022-05-03 at 10 44 23 PM" src="https://user-images.githubusercontent.com/93508580/166628372-2a8d94a5-4e2a-4b2c-a75d-1f2a3d60a901.png">
-
-From the above we can see that the ratings from all the user tends to be on the higher side which gives rise to posibility of user bias. To eliminate this noramlization can be done as explained below.
-
-<img width="1276" alt="Screen Shot 2022-05-03 at 10 45 24 PM" src="https://user-images.githubusercontent.com/93508580/166628449-9ea9eec2-b535-4eb8-900c-1fad60c3f7e8.png">
-
-Here we can see some products tend to have more no of ratings than other. In some cases its disproportionately higher. So to eliminate this we have filtered out the products keeping a threshold for minimun no of ratings.
-
-In order to find the average rating provided by individual users we plotted a histogram by grouping the userid aganist the ratings and also to show the number of ratings per product
-
-<img width="1237" alt="Screen Shot 2022-05-03 at 10 47 04 PM" src="https://user-images.githubusercontent.com/93508580/166628556-653ff13c-9b89-4807-9c12-e8c825f6dc74.png">
-
-<img width="1231" alt="Screen Shot 2022-05-03 at 10 49 07 PM" src="https://user-images.githubusercontent.com/93508580/166628691-f8d9c0b1-9f6d-42de-ab77-b10c8f3a48fa.png">
-
-A box plot is used to show how ratings data is distributed
-
-
-<img width="430" alt="Screen Shot 2022-05-03 at 10 50 38 PM" src="https://user-images.githubusercontent.com/93508580/166628785-e52df916-80b0-4930-9b84-7825f8c3d6ce.png">
-
-Similarly we are using violin plot for ratings feature to depict summary statistics and the density.
-
-<img width="399" alt="Screen Shot 2022-05-03 at 10 51 20 PM" src="https://user-images.githubusercontent.com/93508580/166628839-7e889fbd-be8e-47a1-ae91-5f62a0a4a7e5.png">
-
-From the above two graphs we can see that most user have rated the products very highly as the concentraion of the ratings is fairly on the higher end. So to eliminate this bias where some user tends to rate Products very leninetly we have normalized the ratings by substracting average rating value from each rating.
 
 # Comparisons
 
