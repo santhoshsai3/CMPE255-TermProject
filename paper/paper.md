@@ -119,19 +119,29 @@ From the above classified methods of Recommended Systems we decided to implement
 
 # Comparisons
 
-From the visualiation of the data in the above section. Lets look at what are the conslusions we make and what are the models we are planning to use.
+The most important part in implementation of any machine learning model is to compare the model accuracy with the accuracy of other models. The Root Mean Square Error, Mean Square Error are some of the metrics which can be used to compare the accuracy of a model.
+Mean Square Error: It is the square of the difference between the predicted value and the actual value.
+Root Mean Square Error: It is the square root of Mean Square Error. This is the most easily interpreted statistics as it has the same units as the quantity plotted on the vertical axis.
 
-1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will not be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
+Now we use the above metrics RMSE, and MSE to compare the different models which we implemented as part of this project.
 
-2.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
+1.Popularity based systems:- This method is all about predicting the top rated products to any user.It is user cold-start resistant. The system can suggest products without any information about the user. As every user gets same recommendations, it is not personalized recommendation. This recommandation system is useful to recommend the new users as initially the user has low correlation with other users. This approach has very low accuracy and high errors but needs less compulational power.
 
-3.Collaberative Filtering:- By looking at the attributes available in the dataset that describe the Product(which is only user Ratings). And also by looking at the clear User-User and User-Product connection from the data. We have decided that Collaberative Filtering will be the apt method for our recommendation system. 
+2.Content based recommedations:- Content-based filtering methods are based on product descriptions and user preferences.As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
 
-We are working on different models like cosine similarity,SVD and KNN to acheive the required results and will update the results once we are done with the work.
+3.Collaborative Filtering:- As the content based filtering is not possible, the only way to make the predictions is by using Collaborative filtering. The Collaborative filtering is all about finding the similarity between items and users.
+We have calculated similarity using cosine function, jaccard function and Pearson function.
 
+4. Model Based Collaborative Filtering: The User-Item matrix which is generated in Collaborative Filtering have very high number of dimensions.Calculating the similarity between users/items is highly time consuming. We have used existing machine learning models like KNN, SVD and NMF to reduce the dimensions and calculate the similarity in less time.
+
+We have imlemented all the above methods and plotted a line graph to compare the Root Mean Square Error of each model.
+<img width="446" alt="Screen Shot 2022-05-23 at 12 40 45 PM" src="https://user-images.githubusercontent.com/47252929/169912899-d6725ef3-38ce-4291-9de7-473fb58d32aa.png">
+
+On Comparing all the methods, the least RMSE value occurs in Model based Collaborative filtering model using SVD.
 # Example Analysis
 
 # Conclusions
+Filtering the important data and predicting the right recommendations to the right user is beneneficial to both the user and the Seller. We have implemented couple of methods to predict the right recommendations. After analysing all the model, we came to conculsion that all the models are giving more Mean Square Error which implies the accuracy of the model is less.  In future, we plan to build the recommendation system using Matrix Factorization which involves building couple of neural networks to filter the data with more accuracy.
 
 
 # References
