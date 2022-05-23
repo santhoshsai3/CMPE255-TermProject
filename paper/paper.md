@@ -22,9 +22,9 @@ Recommeder system helps in creating a relation between the user and items and ut
 
 Our goal of the project is to recommend products to users based on the ratings given to the products. Before diving into data modeling methods, we have to process and clean the data to prepare the dataset for modeling. We will go through the data cleaning, data analysis and data processing in this section.
  
-**1.Data Collection:** We have used a dataset from kaggle. The dataset contains 2 million customer reviews and ratings and 4 features. The entries are from May 1996 - July 2014.
+**1.Data Collection:** We have used a dataset from kaggle. The dataset contains over 2 million customer reviews and ratings and 4 features. The entries are from May 1996 - July 2014.
 
-**2.Data Cleaning:** We have checked for any null values in the data. We didn't find any null values or duplicates in this dataset. So the dataset is mostly clean. Apart from the null or missing values we found alphanumeric data for UserId and product. So in order to normalize the data we used label encoder to convert alphanumeric data to numeric.
+**2.Data Cleaning:** We have checked for any null values in the data. We didn't find any null values or duplicates in this dataset. So the dataset is mostly clean. We also checked the datatypes of the features of the categorical variables and found 2 of them of type Object. We used LableEncoder in SkLearn library to convert them into numeric types. The ratings given by different users is different, we have normalized the ratings to make our model more robust.
 
 **3.Data Analysis and Visualization:** As part of data analysis we analyzed the relationship between user and the products as this dataset is mainly based on the ratings that are provided by the user for every product. We analyzed scenarios like the number of rated products per user and the number of ratings for per product. From this we understood which user has given the max/min number of ratings and which product has the max/min number of ratings. 
 
@@ -32,7 +32,7 @@ We have plotted the following plots to infer few observations
 
 **- Bar plot for unique users,products and total records**
 
-<img width="700" alt="bar_plot_user" src="/images/bar_plot_user.png">
+<p style="text-align:center;"><img width="700" alt="bar_plot_user" src="/images/bar_plot_user.png"> </p>
 
 We can infer from the above graph how the data is distributed in the dataset. The total number of records is 2M and total number of users is 1.2M which makes us conclude that on an average every user rates at least twice. The total number of unique products is 250K. We can conclude that on an average, each product is rated at least 8-10 times.
  
