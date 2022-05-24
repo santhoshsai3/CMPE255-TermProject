@@ -34,14 +34,14 @@ We have plotted the following plots to infer few observations
 
 <p style="text-align:center;"><img width="700" alt="bar_plot_user" src="/images/bar_plot_user.png"> </p>
 
-We can infer from the above graph how the data is distributed in the dataset. The total number of records is 2M and total number of users is 1.2M which makes us conclude that on an average every user rates at least twice. The total number of unique products is 250K. We can conclude that on an average, each product is rated at least 8-10 times.
+We can infer from the above graph how the data is distributed in the dataset. The total number of records is 2M and total number of users is 1.2M which makes us conclude that on an average every user rates at least twice. The total number of unique products is 250K. We can conclude that on an average, each product is rated at least 8-10 times. Here we can see that no of total records are significantly more than the not of unique products and unique users. That means there are a no of ratings for different combinations of user ids and product id, which makes this data set a perfect fit for user to user or item to item ccollaborative filtering techniques.
  
 **- Bar plot for ratings given by users**
 
 <img width="700" alt="bar_plot_user_ratings" src="/images/bar_plot_user_ratings.png">
  
 The above graph shows the distribution of various ratings. The rating 5 was given by 1.2M users which is highest and rating 2 is given by 113k users which is lowest.
-We can also see that the sum of users which gave 1,2,3,4 ratings is still less than the users who gave rating 5.
+Here we can see that the no of ratings given by all the users on all the products are disproportionately on higher side. So to negate this bias we have normalized the ratings of the products by substracted average rating of each product from its orginal rating.
  
 **- Bar plot to show the most popular products**
 
@@ -49,7 +49,7 @@ We can also see that the sum of users which gave 1,2,3,4 ratings is still less t
 
  
 The above graph shows the most popular products and their frequency. The most popular product is B001MA0QY2 which is rated by 7533 Users.
-The number of ratings for the first popular product and second popular product is very high.
+The number of ratings for the first popular product and second popular product is very high. Here we can see that some Products have more no of reviews and some dont have any. So to take care of this disproportionality we have kept the average no of reviews as threshold and eliminated the rest of them. 
  
 **- Bar plot to show the ratings range**
 
@@ -94,12 +94,9 @@ This system works on the basis of popularity or trend. These systems verify abou
 
 So as part of this method we are aggregating the count of users for every product. Once we have the count of the number of users product wise it becomes easy for us to identify the most popular products.  The products are sorted based on the counts of users and a ranking is provided to each and every product. Now when a UserId is provided as input these popular products will be recommended to the users. If a new user signs in they will find these products as recommendations.But the main disadvantage with this method is this system would recommend the same sort of products which are solely based upon popularity to every other user which is not ideal. So it is not a personalized model.
 
+**2.Content based recommedations** :- This model is mainly based on the information of the contents of the item rather than on the user opinions. Since our data set doesnt have any attributes which describe the data except for ratings. We decided that content based recommendation is not the best fit for our data set.
 
-**2.Classification model based** :- This model tries to understand the features of the user and then applies the classification algorithm to decide whether the user is interested in the prodcut or not.
-
-**3.Content based recommedations** :- This model is mainly based on the information of the contents of the item rather than on the user opinions.
-
-**4.Collaberative Filtering** :- Collaborative filtering is a technique to recommend items to a user based on the items liked by similar users.It is based on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste.
+**3.Collaberative Filtering** :- Collaborative filtering is a technique to recommend items to a user based on the items liked by similar users.It is based on assumption that people like things similar to other things they like, and things that are liked by other people with similar taste.
 ![CF](https://user-images.githubusercontent.com/47252929/169866425-2f8cbb79-6a0e-4825-9188-5621cc8a8912.png)
 The CF techniques are broadly divided into 2-types:
 ![collaborative filtering](https://user-images.githubusercontent.com/47252929/169863912-e5243cf7-d6c7-4c82-b44e-05ff130f2720.png)
@@ -111,27 +108,37 @@ They can be further classified as :
 
 <img width="751" alt="Screen Shot 2022-05-23 at 9 43 29 AM" src="https://user-images.githubusercontent.com/47252929/169868256-11dfb8ed-3f2b-4dd7-b192-32592f46c222.png">
 
-**5.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.
+**4.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.Here we have implemented the different methods which make a hybrid recommendation system. But not the one which take 2 different methods into consideration.
 
-**6.Association rule mining** :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
+**5.Association rule mining** :- Association rules capture the relationships between items based on their patterns of co-occurrence across transactions.
 
 From the above classified methods of Recommended Systems we decided to implement Popularity Based Recommended systems, User Based Collaborative Filtering and Item based Collaborative Filtering methods. We are not using Content based recommender systems because it recommends products or items based on their description or features. We don’t have any features or descriptions provided in our dataset that can be used for content based. 
 
 # Comparisons
 
-From the visualiation of the data in the above section. Lets look at what are the conslusions we make and what are the models we are planning to use.
+The most important part in implementation of any machine learning model is to compare the model accuracy with the accuracy of other models. The Root Mean Square Error, Mean Square Error are some of the metrics which can be used to compare the accuracy of a model.
+Mean Square Error: It is the square of the difference between the predicted value and the actual value.
+Root Mean Square Error: It is the square root of Mean Square Error. This is the most easily interpreted statistics as it has the same units as the quantity plotted on the vertical axis.
 
-1.Popularity based systems:- This method we can use when we encounter a cold start problem. As you will see below we are planning to use Collaberative Filtering for our Recommendation System. But this method is user-user or user-Product Recommendation system. That means we need to have history of that particular user or Product to find a similar entity. But this will not be the case for new users or new products. So we have implemented a Popularity based recommendation system which will recommend the top 10 highest rated Products.
+Now we use the above metrics RMSE, and MSE to compare the different models which we implemented as part of this project.
 
-2.Content based recommedations:- As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
+1.Popularity based systems:- This method is all about predicting the top rated products to any user.It is user cold-start resistant. The system can suggest products without any information about the user. As every user gets same recommendations, it is not personalized recommendation. This recommandation system is useful to recommend the new users as initially the user has low correlation with other users. This approach has very low accuracy and high errors but needs less compulational power.
 
-3.Collaberative Filtering:- By looking at the attributes available in the dataset that describe the Product(which is only user Ratings). And also by looking at the clear User-User and User-Product connection from the data. We have decided that Collaberative Filtering will be the apt method for our recommendation system. 
+2.Content based recommedations:- Content-based filtering methods are based on product descriptions and user preferences.As we can see from the data visualization above there are not enough attributes to the data, infact there no attributes to the product except for the ratings. So Content based recommendation cannot be a vaiable option for our recommendation system for this particular data set.
 
-We are working on different models like cosine similarity,SVD and KNN to acheive the required results and will update the results once we are done with the work.
+3.Collaborative Filtering:- As the content based filtering is not possible, the only way to make the predictions is by using Collaborative filtering. The Collaborative filtering is all about finding the similarity between items and users.
+We have calculated similarity using cosine function, jaccard function and Pearson function.
 
+4. Model Based Collaborative Filtering: The User-Item matrix which is generated in Collaborative Filtering have very high number of dimensions.Calculating the similarity between users/items is highly time consuming. We have used existing machine learning models like KNN, SVD and NMF to reduce the dimensions and calculate the similarity in less time.
+
+We have imlemented all the above methods and plotted a line graph to compare the Root Mean Square Error of each model.
+<img width="446" alt="Screen Shot 2022-05-23 at 12 40 45 PM" src="https://user-images.githubusercontent.com/47252929/169912899-d6725ef3-38ce-4291-9de7-473fb58d32aa.png">
+
+On Comparing all the methods, the least RMSE value occurs in Model based Collaborative filtering model using SVD.
 # Example Analysis
 
 # Conclusions
+Filtering the important data and predicting the right recommendations to the right user is beneneficial to both the user and the Seller. We have implemented couple of methods to predict the right recommendations. After analysing all the model, we came to conculsion that all the models are giving more Mean Square Error which implies the accuracy of the model is less.  In future, we plan to build the recommendation system using Matrix Factorization which involves building couple of neural networks to filter the data with more accuracy.
 
 
 # References
