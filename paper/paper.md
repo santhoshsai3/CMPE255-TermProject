@@ -145,3 +145,7 @@ Filtering the important data and predicting the right recommendations to the rig
 
 
 # References
+
+1.N. Mustafa, A. O. Ibrahim, A. Ahmed and A. Abdullah, "Collaborative filtering: Techniques and applications," 2017 International Conference on Communication, Control, Computing and Electronics Engineering (ICCCCEE), 2017, pp. 1-6, doi: 10.1109/ICCCCEE.2017.7867668.
+2.J. Joy and R. V. G, "Comparison of Generic Similarity Measures in E-learning Content Recommender System in Cold-Start Condition," 2020 IEEE Bombay Section Signature Conference (IBSSC), 2020, pp. 175-179, doi: 10.1109/IBSSC51096.2020.9332162.
+3.A. Fanca, A. Puscasiu, D. -I. Gota and H. Valean, "Recommendation Systems with Machine Learning," 2020 21th International Carpathian Control Conference (ICCC), 2020, pp. 1-6, doi: 10.1109/ICCC49264.2020.9257290.
