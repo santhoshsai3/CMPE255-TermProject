@@ -40,7 +40,7 @@ Installation of the packages available in requirements.txt before running the co
 * Navigate to the code folder to run the ipynb files in jupyter notebook.
 
 ## Drive Link
-The drive link contains the recording of out presentation and also the ppt. [here](https://drive.google.com/drive/folders/1IxE4bAtqsOXTbo2FfDR3597ojpM-5KwY?usp=sharing)
+The drive link contains the recording of our presentation and also the ppt. [here](https://drive.google.com/drive/folders/1IxE4bAtqsOXTbo2FfDR3597ojpM-5KwY?usp=sharing)
 
 ## Dataset
 Dataset:  We are using a dataset from Kaggle from the link below.
