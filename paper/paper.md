@@ -132,7 +132,7 @@ And we used only the unsupervised learning methods in to implement this system.
 3.Collaborative Filtering:- As the content based filtering is not possible, the only way to make the predictions is by using Collaborative filtering. The Collaborative filtering is all about finding the similarity between items and users.
 We have calculated similarity using cosine function, jaccard function and Pearson function.
 
-4. Model Based Collaborative Filtering: The User-Item matrix which is generated in Collaborative Filtering have very high number of dimensions.Calculating the similarity between users/items is highly time consuming. We have used existing machine learning models like KNN, SVD and NMF to reduce the dimensions and calculate the similarity in less time.
+4.Model Based Collaborative Filtering: The User-Item matrix which is generated in Collaborative Filtering have very high number of dimensions.Calculating the similarity between users/items is highly time consuming. We have used existing machine learning models like KNN, SVD and NMF to reduce the dimensions and calculate the similarity in less time.
 
 We have imlemented all the above methods and plotted a line graph to compare the Root Mean Square Error of each model.
 <img width="446" alt="Screen Shot 2022-05-23 at 12 40 45 PM" src="https://user-images.githubusercontent.com/47252929/169912899-d6725ef3-38ce-4291-9de7-473fb58d32aa.png">
