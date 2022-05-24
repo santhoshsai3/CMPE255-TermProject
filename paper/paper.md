@@ -107,6 +107,8 @@ The key difference of memory-based approach from the model-based techniques is t
 They can be further classified as :
 
 <img width="751" alt="Screen Shot 2022-05-23 at 9 43 29 AM" src="https://user-images.githubusercontent.com/47252929/169868256-11dfb8ed-3f2b-4dd7-b192-32592f46c222.png">
+SVD is a unsupervised machine learning algorithm which is popularly used dimension reduction, data-driven model which is used to predict the ratings and recommend the products based on the predictions made by it. 
+
 
 **4.Hybrid Approaches** :- This method combines collaborative filtering, content-based filtering, and other approaches.Here we have implemented the different methods which make a hybrid recommendation system. But not the one which take 2 different methods into consideration.
 
@@ -121,6 +123,7 @@ Mean Square Error: It is the square of the difference between the predicted valu
 Root Mean Square Error: It is the square root of Mean Square Error. This is the most easily interpreted statistics as it has the same units as the quantity plotted on the vertical axis.
 
 Now we use the above metrics RMSE, and MSE to compare the different models which we implemented as part of this project.
+And we used only the unsupervised learning methods in to implement this system.
 
 1.Popularity based systems:- This method is all about predicting the top rated products to any user.It is user cold-start resistant. The system can suggest products without any information about the user. As every user gets same recommendations, it is not personalized recommendation. This recommandation system is useful to recommend the new users as initially the user has low correlation with other users. This approach has very low accuracy and high errors but needs less compulational power.
 
